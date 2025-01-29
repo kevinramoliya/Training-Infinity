@@ -1,0 +1,102 @@
+.main-content{
+    border: 2px solid black;
+    height: auto;
+    width: 45%;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #F2F2F2;
+}
+body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 35px;
+    button{
+        padding: 10px 20px;
+        background-color: rgb(64, 170, 232);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    h2{
+        margin-bottom: 20px;
+        margin-top: -15px;
+    }
+    input{
+        width: auto;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+  
+}
+.main{
+    width: 100%;
+    display: flex;
+align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+.table{
+    width: 44%;
+    padding: 10px;
+    border-collapse: collapse;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+table{
+    width: 30%;
+}
+
+td{
+    padding: 10px;
+    border: 2px solid blueviolet;
+    
+
+}
+tr{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ 
+}
+th{
+    padding: 10px;
+    border: 2px solid blueviolet;
+    padding: 10px;
+    font-size: 25px;
+    
+
+}
+td button{
+    padding: 10px 20px;
+    background-color: rgb(231, 49, 49);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form p{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    font-family: monospace;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            <form>
+                <h2>Registration Form</h2>
+                <div class="form">
+                    <label for="name">First Name:</label>
+                    <input type="text" id="firstname" name="name" placeholder="Enter Your First Name" required>
+                    <p id="fe"></p>
+                </div>
+                <div class="form">
+                    <label for="name">Last Name:</label>
+                    <input type="text" id="lastname" name="name" placeholder="Enter Your Last Name" required>
+                    <p id="le"></p>
+
+                </div>
+                <div class="form">
+                    <label for="name">Contact:</label>
+                    <input type="text" id="contact" name="Contact" placeholder="Enter Contact Number" required>
+                    <p id="ce"></p>
+
+                </div>
+                <div class="form">
+                    <label for="name">Email:</label>
+                    <input type="text" id="email" name="Email" placeholder="Enter Email" required>
+                    <p id="ee"></p>
+
+                </div>
+                <div class="form">
+                    <label for="name">Password:</label>
+                    <input type="text" id="password" name="Password" placeholder="Enter Password" required>
+                    <p id="pe"></p>
+
+                </div>
+                <div class="form">
+                    <label for="name">Confirm Password:</label>
+                    <input type="text" id="confirmpassword" name="Confirm Password" placeholder="Enter Confirm Password"
+                        required>
+                    <p id="cpe"></p>
+
+                </div>
+                <div class="form">
+                    <button type="submit" id="submit" name="submit" required>Button</button>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Delete</th>
+                </tr>
+               
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    submit.addEventListener("click", (e) => {
+
+
+
+        e.preventDefault();
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var contact = document.getElementById("contact").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value
+        var confirmpassword = document.getElementById("confirmpassword").value
+
+        var fe = document.getElementById("fe");
+        var le = document.getElementById("le");
+        var ee = document.getElementById("ee");
+        var ce = document.getElementById("ce");
+        var pe = document.getElementById("pe");
+        var cpe = document.getElementById("cpe");
+
+        fe.textContent="";
+        le.textContent="";
+        ee.textContent="";
+        ce.textContent="";
+        pe.textContent="";
+        cpe.textContent="";
+
+        if(!firstname){
+            fe.textContent="Please Enter First Name"
+        }
+        if(!lastname){
+            le.textContent="Please Enter last Name"
+        }
+        if(!email){
+            ee.textContent="Please Enter Email"
+        }
+        if(!contact){
+            ce.textContent="Please Enter Contect"
+        }
+        if(!password){
+            pe.textContent="Please Enter Password"
+        }
+        if(!confirmpassword){
+            cpe.textContent="Please Enter Confirm Password"
+        }
+
+
+        // For already Exisited Data Check
+        var emailexist = document.querySelectorAll("table tr")
+        for(var row of emailexist){
+            var rowemail = row.cells[2]?.textContent;
+            if(rowemail===email){
+                ee.textContent="Email is already regsitred"
+                return
+            }
+
+        }
+
+        var contectexist = document.querySelectorAll("table tr");
+        for(var row of contectexist){
+            var contactrow = row.cells[3]?.textContent;
+            if(contactrow===contact){
+                ce.textContent = "Contact already exist"
+                return
+            }
+        }
+      
+
+        if (password !== confirmpassword) {
+             cpe.textContent="Password does not match"
+            return false;
+        }
+
+        var contactregex = /^\d{10}$/;
+        if (!contactregex.test(contact)) {
+           
+            return false;
+        }
+        var emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailregex.test(email)) {
+           
+            return false;
+        }
+     
+        
+        alert("Form submitted successfully");
+
+
+        DataGenerator(firstname, lastname, email,contact)
+
+
+    })
+    function DataGenerator(firstname, lastname, email,contact){
+        var table = document.querySelector("table");
+        var tr = document.createElement("tr");
+        var array = [firstname, lastname, email,contact];
+        for(var i=0;i<array.length;i++){
+                var td = document.createElement("td");
+                td.textContent = array[i]
+                tr.appendChild(td);
+        }
+        var deleteBtn = document.createElement("td");
+        var deleteButtom = document.createElement("button");
+        deleteButtom.textContent= "Delete";
+        deleteButtom.addEventListener("click", ()=>{
+            tr.remove();
+        })
+
+        deleteBtn.appendChild(deleteButtom);
+        tr.appendChild(deleteBtn);
+        table.appendChild(tr);
+
+
+    }
+
+   
+
+</script>
