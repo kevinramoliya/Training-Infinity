@@ -48,7 +48,7 @@ align-items: center;
     flex-direction: column;
 }
 .table{
-    width: 44%;
+    width: auto;
     padding: 10px;
     border-collapse: collapse;
     text-align: center; 
@@ -72,7 +72,7 @@ td{
 }
 tr{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
  
 }
@@ -99,4 +99,8 @@ td button{
     font-size: 18px;
     text-align: center;
     font-family: monospace;
+}
+
+table{
+    width: 100%;
 }

@@ -127,7 +127,13 @@
         // For already Exisited Data Check
         var emailexist = document.querySelectorAll("table tr")
         for(var row of emailexist){
-            var rowemail = row.cells[2]?.textContent;
+            var rowemail = row.cells[2]?
+            
+            
+            
+            
+            
+            .textContent;
             if(rowemail===email){
                 ee.textContent="Email is already regsitred"
                 return
