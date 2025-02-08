@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="dob">
+                <label>Enter Your Date of Birth</label>
+                <input type="date" id="dob" />
+            </div>
+            <br>
+            <div class="cd">
+                <label>Current Date</label>
+                <p id="mytxt"></p>
+            </div>
+            <button onclick="calculateAge()">Calculate Age</button>
+            <p id="demo"></p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<script>
+    var today = new Date();
+    var current = document.getElementById('mytxt')
+    current.innerHTML = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+    function calculateAge() {
+        var dob = new Date(document.getElementById("dob").value);
+        var year = (today.getFullYear() - dob.getFullYear()) - 1;
+        if (today.getMonth() - dob.getMonth()) {
+            var month = today.getMonth() - dob.getMonth();
+        }
+        else {
+            year--;
+            var month = 12 + today.getMonth() - dob.getMonth();
+        }
+        if(today.getDate() >= dob.getDate){
+            var date = today.getDate() - dob.getDate;
+        }
+        else{
+            month--;
+            var date = 31 + today.getDate() - dob.getDate();
+            if(month<0){
+                month=11;
+                year--;
+            }
+        }
+        document.getElementById("demo").innerHTML = "Your Age is: "+ year + "Years"+ month + "Month" + "-" + date + "Days" + "-"  ;
+    }
+   
+    
+    
+</script>

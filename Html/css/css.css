@@ -1,0 +1,416 @@
+*::selection{
+    background-color:green;
+    color: white;
+    
+}
+
+* {
+    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html ,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+button{
+border-radius: 20px;
+background-color:rgb(255, 255, 255);
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;  
+    
+}
+
+
+
+.menu a{
+    text-decoration: none;
+    color: #181111;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+.menu a:hover{
+    color: #FF5722;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+}
+
+.main-content{
+    width: 100%;
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.left-column{
+    width: 50%;
+   height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    background-color: #d9ddde
+
+}
+.main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.left-column .seconddiv p{
+    margin: 0;
+}
+.firstdiv{
+    font-family: sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+.seconddiv{
+    font-size: 85px;
+    text-align: center;
+    font-weight: bolder;
+}
+.thirddiv{
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+
+
+}
+.forthdiv button{
+   
+    font-size: 35px;
+    padding: 10px;
+    
+}
+
+
+.right-column{
+    width: 49%;
+height: 800px;
+overflow: hidden;
+
+}
+.right-column img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo{
+    margin-left: 20px;
+    height: 40px;
+    width: auto;
+}
+
+.menu{
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    padding: 10px 0;
+   
+
+}
+.main-content-2{
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.third-left-column{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:5px;
+    height: 100%;
+    gap: 5px;
+}
+.top{
+    background-color: #d9ddde;
+    height:500px;
+
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.bottom{
+    height: 490px;
+    width: 100%;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.photo-of-dish {
+    overflow: hidden;
+height: 100%;
+width: 100%;
+}
+.photo-of-dish img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.third-left-colomn-text{
+    
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    height: max-content ;
+    margin-top: 80px;
+    font-size: 49px;
+}
+.third-left-colomn-2ndtext{
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 37px;
+    margin-top: -40px;
+   
+}
+
+.third-left-colomn-button button{
+    font-size: 35px;
+    margin-bottom: 100px;
+    padding: 8px
+    
+   
+    
+}
+.third-right-colomn{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:5px;
+    height: 100%;
+    gap: 5px;
+    background-color: #d9ddde;
+}
+.third-between-colomn{
+    height: 1000px;
+   width: 33%;
+}
+.main-chef-photo{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.main-chef-photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.third-bottom{
+    height: 490px;
+    width: 100%;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+.about{
+    
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  
+
+}
+.about-2nd-text{
+    
+    font-size: 35px;
+    text-align: Center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+.about-3rd-text{
+    font-size: 27px;
+    text-align: center;
+    margin-top: -20px;
+}
+.about-button button{
+    font-size: 32px;
+   padding: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+    border: 1px solid black;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+}
+
+.fooddetails{
+
+    height: 700px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.details-food{
+   
+    height: 700px;
+    width: 49%;
+    overflow: hidden;
+}
+.details-food img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.details-text{
+   
+    height: 700px;
+    width: 26%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d9ddde;
+    
+    
+}
+.details-text h1 {
+    font-size: 45px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: left;
+  
+}
+.details-text p{
+    text-align: center;
+    font-size: 35px;
+}
+
+.details-right {
+   
+    height: 700px;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-top {
+    height: 345px;
+    width: 100%;
+  
+}
+
+.details-top img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.photosection{
+    height:750px;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    margin-top: 30px;
+}
+.photo-div{
+    height: 100%;
+    width: 33%;
+  overflow: hidden;
+  
+}
+.photo-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.logoimage{
+    padding-left: 150px;
+img{
+    height: 600px;
+    width: 100%;
+}
+}
+
+.letterbox{
+    height: 600px;
+    width: 100%;
+   
+    background-color: #d9ddde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letterdiv{
+    background-color:#fff ;
+    height: 390px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 25px;
+       
+    }
+    
+}
+.letterdiv .firstdiv {
+    font-style: italic;
+    font-size: 50px;
+}
+.footer{
+    background-color: #333;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+   
+    
+
+}
+
+.footer1{
+    text-align: center;
+    font-size: 20px;
+    height: 200px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footer2{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+   
+}
